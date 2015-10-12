@@ -8,6 +8,15 @@
     <string name="blue">Blue</string>
     <string name="indigo">Indigo</string>
     <string name="violet">Violet</string>
+    <string name="enterBal">Enter Card Balance($)</string>
+    <string name="yearlyInt">Enter Yearly Interest Rate (%)</string>
+    <string name="minPam">Enter Minimum Payment ($)</string>
+    <string name="finalCardBal">Final Card Balance ($)</string>
+    <string name="monthsRemain">Months Remaining</string>
+    <string name="paidInt">Interest Paid Will Be ($)</string>
+    <string name="compute">COMPUTE</string>
+    <string name="clear">CLEAR</string>
+
 
 
     <string name="action_settings">Settings</string>
