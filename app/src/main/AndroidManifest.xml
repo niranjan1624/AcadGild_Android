@@ -24,6 +24,10 @@
             android:name=".CredCard"
             android:label="@string/title_activity_cred_card" >
         </activity>
+        <activity
+            android:name=".Session4Assignment1"
+            android:label="@string/title_activity_session4_assignment1" >
+        </activity>
     </application>
 
 </manifest>
