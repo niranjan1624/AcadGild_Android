@@ -20,6 +20,10 @@
             android:name=".HideNSeek"
             android:label="@string/title_activity_hide_nseek" >
         </activity>
+        <activity
+            android:name=".CredCard"
+            android:label="@string/title_activity_cred_card" >
+        </activity>
     </application>
 
 </manifest>

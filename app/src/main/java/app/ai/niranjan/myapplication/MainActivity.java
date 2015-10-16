@@ -1,5 +1,6 @@
 package app.ai.niranjan.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(this, CredCard.class);
+        startActivity(intent);
+        finish();
         ViewGroup group = (ViewGroup)findViewById(R.id.layout);
         View v;
         for(int i = 0; i < group.getChildCount(); i++) {
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(v instanceof TextView)
                 v.setOnClickListener(this);
         }
+
     }
 
     @Override

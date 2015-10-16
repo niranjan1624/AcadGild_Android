@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="#000000"
+    tools:context=".CreditCard">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,8 +67,52 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="3"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:id="@+id/layout1">
         <EditText
+            android:id="@+id/bal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:inputType="number"
+            android:background="@drawable/edittextstyle"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/interest"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:inputType="number"
+            android:background="@drawable/edittextstyle"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/minPayment"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:inputType="number"
+            android:background="@drawable/edittextstyle"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/cardBal"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
@@ -80,6 +126,7 @@
             android:background="@drawable/edittextstyle"
             android:layout_weight="1"/>
         <EditText
+            android:id="@+id/months"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
@@ -93,45 +140,7 @@
             android:background="@drawable/edittextstyle"
             android:layout_weight="1"/>
         <EditText
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_centerVertical="true"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:ellipsize="start"
-            android:gravity="center"
-            android:inputType="text"
-            android:background="@drawable/edittextstyle"
-            android:layout_weight="1"/>
-        <EditText
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_centerVertical="true"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:ellipsize="start"
-            android:gravity="center"
-            android:inputType="text"
-            android:background="@drawable/edittextstyle"
-            android:layout_weight="1"/>
-        <EditText
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_centerVertical="true"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:ellipsize="start"
-            android:gravity="center"
-            android:inputType="text"
-            android:background="@drawable/edittextstyle"
-            android:layout_weight="1"/>
-        <EditText
+            android:id="@+id/paidInt"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
@@ -147,14 +156,29 @@
 
     </LinearLayout>
 </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/compute"
-        android:gravity="center"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/clear"
-        android:gravity="center"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:gravity="center"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="32dp"
+            android:id="@+id/clear"
+            android:onClick="clear"/>
+        <Button
+            android:id="@+id/compute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/compute"
+            android:gravity="center"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="16dp"
+            android:onClick="compute"/>
+
+    </LinearLayout>
+
 </LinearLayout>
