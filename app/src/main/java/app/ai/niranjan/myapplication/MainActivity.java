@@ -1,19 +1,28 @@
 package app.ai.niranjan.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, HideNSeek.class);
-        startActivity(intent);
+        ViewGroup group = (ViewGroup)findViewById(R.id.layout);
+        View v;
+        for(int i = 0; i < group.getChildCount(); i++) {
+            v = group.getChildAt(i);
+            if(v instanceof TextView)
+                v.setOnClickListener(this);
+        }
     }
 
     @Override
@@ -36,5 +45,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id1 = v.getId();
+        TextView tv = (TextView) v;
+        Log.d("Color", tv.getText().toString());
+        Toast.makeText(getApplicationContext(),tv.getText().toString(),Toast.LENGTH_LONG).show();
     }
 }
