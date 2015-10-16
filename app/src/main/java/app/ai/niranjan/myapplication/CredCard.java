@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CredCard extends AppCompatActivity {
     EditText bal, interest, minPayment,finalCardBal, months, paidInt;
@@ -60,7 +61,9 @@ public class CredCard extends AppCompatActivity {
         bal1 = bal.getText().toString();
         interest1 = interest.getText().toString();
         minPay = minPayment.getText().toString();
-
+        if((interest1.equals("")) || bal1.equals("") || (minPay.equals(""))) {
+            Toast.makeText(this, "Please fill the details", Toast.LENGTH_LONG).show();
+        } else {
             int principal  = Integer.parseInt(bal1), rate = Integer.parseInt(interest1), iMinPay = Integer.parseInt(minPay);
             int monthlyFloatInterestPaid, monthlyPrincipal, monthlyBal, monthsRemain;
             finalCardBal = (EditText) findViewById(R.id.cardBal);
@@ -79,6 +82,6 @@ public class CredCard extends AppCompatActivity {
                 count++;
             }
             months.setText((count - 1) + "");
-        
+        }
     }
 }
