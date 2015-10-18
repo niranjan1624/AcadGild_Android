@@ -30,4 +30,5 @@
     <string name="title_activity_session4_assignment1">Session4Assignment1</string>
     <string name="descend">Descend</string>
     <string name="title_activity_custom_list_view">CustomListView</string>
+    <string name="title_activity_gridview">gridview</string>
 </resources>

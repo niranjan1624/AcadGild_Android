@@ -32,6 +32,10 @@
             android:name=".CustomListView"
             android:label="@string/title_activity_custom_list_view" >
         </activity>
+        <activity
+            android:name=".gridview"
+            android:label="@string/title_activity_gridview" >
+        </activity>
     </application>
 
 </manifest>

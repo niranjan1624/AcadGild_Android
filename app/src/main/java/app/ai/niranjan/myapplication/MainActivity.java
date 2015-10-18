@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, CustomListView.class);
+        Intent intent = new Intent(this, gridview.class);
         startActivity(intent);
         finish();
         ViewGroup group = (ViewGroup)findViewById(R.id.layout);
