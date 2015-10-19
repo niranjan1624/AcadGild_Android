@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.ai.niranjan.myapplication"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="app.ai.niranjan.myapplication.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.ai.niranjan.myapplication.HideNSeek"
+            android:label="@string/title_activity_hide_nseek" >
+        </activity>
+        <activity
+            android:name="app.ai.niranjan.myapplication.CredCard"
+            android:label="@string/title_activity_cred_card" >
+        </activity>
+        <activity
+            android:name="app.ai.niranjan.myapplication.Session4Assignment1"
+            android:label="@string/title_activity_session4_assignment1" >
+        </activity>
+        <activity
+            android:name="app.ai.niranjan.myapplication.CustomListView"
+            android:label="@string/title_activity_custom_list_view" >
+        </activity>
+        <activity
+            android:name="app.ai.niranjan.myapplication.gridview"
+            android:label="@string/title_activity_gridview" >
+        </activity>
+    </application>
+
+</manifest>
